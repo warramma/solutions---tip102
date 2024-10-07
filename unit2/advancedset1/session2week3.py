@@ -152,4 +152,17 @@ if lst[i] + lst[j] = target append both indices to index list
 
 '''
 
+def find_treasure_indices(gold_amounts, target):
+    #remove numbers bigger than target
+    amounts = []
+    indices = []
+    for gold in gold_amounts:
+        if gold < target:
+            amounts.append(gold)
+    
+    if len(amounts) == 2 and amounts[0]+amounts[1] == target:
+        return [0,1]
+    
+    
+
 
