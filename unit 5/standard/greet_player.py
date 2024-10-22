@@ -26,8 +26,21 @@ class Villager:
 
         if item_name in valid:
             self.furniture.append(item_name)
-    
+    def print_inventory(self):
+        my_dict = {}
+        furniture = self.furniture
+        for item in furniture:
 
+            if item in my_dict:
+                my_dict[item] +=1
+            else:
+                my_dict[item] = 1
+        
+        if not my_dict:
+            print("Inventory empty!!!")
+        else:
+            inventory_string = ", ".join(f"{item}: {quantity}" for item, quantity in my_dict.items())
+            print(inventory_string)
 # bones = Villager("Bones", "Dog", "yip yip")
 # bones.catchphrase = "ruff it up"
 
@@ -56,3 +69,11 @@ print(alice.furniture)
 
 alice.add_item("nintendo switch")
 print(alice.furniture)
+
+
+alice = Villager("Alice", "Koala", "guvnor")
+
+alice.print_inventory()
+
+alice.furniture = ["acoustic guitar", "ironwood kitchenette", "kotatsu", "kotatsu"]
+alice.print_inventory()
