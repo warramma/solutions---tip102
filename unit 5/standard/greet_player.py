@@ -10,6 +10,7 @@ class Villager:
         return f"{self.name}: Hey there, {player_name}! How's it going, {self.catchphrase}!"
 
 bones = Villager("Bones", "Dog", "yip yip")
+bones.catchphrase = "ruff it up"
 
 print(bones.greet_player("Wardiyah"))
 print(bones.name)
