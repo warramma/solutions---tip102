@@ -77,3 +77,32 @@ def build_tree(values):
 
 # # Using print_tree() function included at top of page
 # print_tree(merge_orders(order1, order2))
+
+
+# class Puff:
+#      def __init__(self, flavor, left=None, right=None):
+#         self.val = flavor
+#         self.left = left
+#         self.right = right
+
+# def print_design(design):
+#     if not design:
+#         return []
+    
+#     dequeue = deque([design])
+#     flavors = []
+
+#     while dequeue:
+#         current = dequeue.popleft()
+#         flavors.append(current.val)
+#         if current.left:
+#             dequeue.append(current.left)
+#         if current.right:
+#             dequeue.append(current.right)
+    
+#     return flavors
+        
+
+
+# croquembouche = Puff("Vanilla", Puff("Chocolate", Puff("Vanilla"), Puff("Matcha")), Puff("Strawberry"))
+# print(print_design(croquembouche))
