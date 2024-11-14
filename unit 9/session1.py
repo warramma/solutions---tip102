@@ -106,3 +106,39 @@ def build_tree(values):
 
 # croquembouche = Puff("Vanilla", Puff("Chocolate", Puff("Vanilla"), Puff("Matcha")), Puff("Strawberry"))
 # print(print_design(croquembouche))
+
+
+
+
+#---------problem 3
+def max_tiers(cake):
+        if not cake:
+            return 0
+        
+        left_depth = max_tiers(cake.left)
+        right_depth = max_tiers(cake.right)
+        
+        return 1 + max(left_depth, right_depth)
+
+# Using build_tree() function included at top of page
+cake_sections = ["Chocolate", "Vanilla", "Strawberry", None, None, "Chocolate", "Coffee", "Strawberry"]
+cake = build_tree(cake_sections)
+
+print(max_tiers(cake))
+
+
+
+#problem 4 - BFS approach
+def max_tiers(cake):
+    if not cake:
+        return 0
+    queue = deque([cake])
+
+    while queue:
+        
+
+# Using build_tree() function included at top of page
+cake_sections = ["Chocolate", "Vanilla", "Strawberry", None, None, "Chocolate", "Coffee"]
+cake = build_tree(cake_sections)
+
+print(max_tiers(cake))
